@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
 
     [SerializeField]
+    float maxPos; // maksimikohta johon voidaan liikkua
+
+
+    [SerializeField]
     float moveSpeed;
 
 
@@ -40,6 +44,14 @@ public class PlayerController : MonoBehaviour
         // inputX  nuolinäppäinten antama arvo, joko +1 tai -1
         //  moveSpeed itse annettu vakioarvo nopeudelle
         // Time.deltaTime liikkeestä tulee tasaista, nopeus ei riipu kehysten vaihtumisnopeudesta
+
+        float xPos = Mathf.Clamp(transform.position.x, -maxPos, maxPos);
+
+        //  Mathf.Clamp rajoittaa liikkeen arvon annettuihin kohtiin, joka talletetaan muuttujaan xPos
+
+        transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
+
+        // Playerin paikan x -arvo rajoitetaan XPos -arvoon, y ja z pysyvät ennallaan
 
     }
 
