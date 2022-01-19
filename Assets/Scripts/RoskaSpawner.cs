@@ -30,10 +30,17 @@ public class RoskaSpawner : MonoBehaviour
         // Roskat.Length  on taulukon koko
         //satunnainen numero talletaan rand ñ muuttujaan
 
-        Instantiate(Roskat[rand], transform.position, transform.rotation);
+        float randomX = Random.Range(-maxX, maxX); // satunnainen position-arvo  +-maxX arvojen v‰liss‰
+
+        Vector3 randomPos = new Vector3(randomX, transform.position.y, transform.position.z);
+
+        // uusi Vector3 tyyppinen muuttuja randomPos
+        // vain X -positio on satunnainen, y ja z eiv‰t muutu
+                     
+        Instantiate(Roskat[rand], randomPos, transform.rotation);
         //  Instantiate(Roskat[rand],  synnytt‰‰  satunnaisen roskan 
         //  roska syntyy paikkaan transform.position
-        // roskan rotaatio on transform.rotation
+        //  roskan rotaatio on transform.rotation
 
     }
 

@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bb8a9d2dd9a8d42be404f771c5d37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 0
+  maxX: 8.7
   Roskat:
   - {fileID: 7068650133187209249, guid: de7cde76894f37b4395fcae941cb15f5, type: 3}
   - {fileID: 3883116669010864829, guid: 1da67b93538f420408c16a540bcb6bd2, type: 3}
@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roska2
       objectReference: {fileID: 0}
+    - target: {fileID: 3883116669010864829, guid: 1da67b93538f420408c16a540bcb6bd2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3883116669010864831, guid: 1da67b93538f420408c16a540bcb6bd2, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -586,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 6717277511439921560, guid: ac2b6ea2adbcf414397f8a9b331b35bd, type: 3}
       propertyPath: m_Name
       value: Roska3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717277511439921560, guid: ac2b6ea2adbcf414397f8a9b331b35bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6717277511439921562, guid: ac2b6ea2adbcf414397f8a9b331b35bd, type: 3}
       propertyPath: m_RootOrder
@@ -688,6 +696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roska4
       objectReference: {fileID: 0}
+    - target: {fileID: 7046028075444948967, guid: 367a61f2f76c74f4abd1f0cd33c8e2de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 367a61f2f76c74f4abd1f0cd33c8e2de, type: 3}
 --- !u!1001 &7068650132600547579
@@ -700,6 +712,10 @@ PrefabInstance:
     - target: {fileID: 7068650133187209249, guid: de7cde76894f37b4395fcae941cb15f5, type: 3}
       propertyPath: m_Name
       value: Roska1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068650133187209249, guid: de7cde76894f37b4395fcae941cb15f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7068650133187209255, guid: de7cde76894f37b4395fcae941cb15f5, type: 3}
       propertyPath: m_RootOrder
