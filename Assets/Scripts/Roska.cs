@@ -24,5 +24,11 @@ public class Roska : MonoBehaviour
             Destroy(gameObject);
         }
 
+        else if (collider.gameObject.tag == "Boundary")
+        {
+            //Decrease Lives
+            Destroy(gameObject);
+        }
+
     }
 }
