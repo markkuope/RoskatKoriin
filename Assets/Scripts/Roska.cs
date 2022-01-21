@@ -21,6 +21,7 @@ public class Roska : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             //Increment Score
+            GameManager.instance.InrementScore();
             Destroy(gameObject);
         }
 
