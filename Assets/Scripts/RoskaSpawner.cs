@@ -5,16 +5,30 @@ using UnityEngine;
 public class RoskaSpawner : MonoBehaviour
 {
     [SerializeField]
-    float maxX;  // spawnausalueen max X arvo
+    float maxX;  // spawnausalueen max X arvo  
+
+    [SerializeField]
+    float spawnInterval; // aika roskien spawnausten v‰lill‰
+
 
     public GameObject[] Roskat; // Taulukko, johon pistet‰‰n peliss‰ k‰ytetyt roskat
 
+    public static RoskaSpawner instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnRoska();
+        //SpawnRoska(); 
+        StartSpawningRoskat();
     }
 
     // Update is called once per frame
@@ -43,6 +57,27 @@ public class RoskaSpawner : MonoBehaviour
         //  roskan rotaatio on transform.rotation
 
     }
+
+    IEnumerator SpawnRoskat()
+    {
+        yield return new WaitForSeconds(2f); // odotetaan alussa 2 sekuntia
+        while (true)
+        {
+            SpawnRoska();
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    public void StartSpawningRoskat()
+    {
+        StartCoroutine("SpawnRoskat");
+    }
+
+    public void StopSpawningRoskat()
+    {
+        StopCoroutine("SpawnRoskat");
+    }
+
 
 
 }
