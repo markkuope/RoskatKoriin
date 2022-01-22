@@ -34,8 +34,11 @@ public class GameManager : MonoBehaviour
 
     public void InrementScore()
     {
-        score++;
-        scoreText.text = score.ToString(); // muutetaan samalla score int -arvosta string -arvoksi
+        if (!gameOver)  // peli jatkuu
+        {
+            score++;
+            scoreText.text = score.ToString(); // muutetaan samalla score int -arvosta string -arvoksi
+        }
         //print(score);
     }
 
@@ -62,6 +65,11 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        RoskaSpawner.instance.StopSpawningRoskat();
+        GameObject.Find("Player").GetComponent<PlayerController>().canMove = false;
+        // pelaajan liike lakkaa
+
+
         print("GameOver()");
     }
 
