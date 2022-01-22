@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public GameObject livesHolder;
+    public GameObject gameOverPanel;
 
     public static GameManager instance;
     private void Awake()
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
         RoskaSpawner.instance.StopSpawningRoskat();
         GameObject.Find("Player").GetComponent<PlayerController>().canMove = false;
         // pelaajan liike lakkaa
-
+        gameOverPanel.SetActive(true);
 
         print("GameOver()");
     }
