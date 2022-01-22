@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     bool gameOver = false;
 
     public Text scoreText;
+    public GameObject livesHolder;
 
     public static GameManager instance;
     private void Awake()
@@ -43,7 +44,12 @@ public class GameManager : MonoBehaviour
         if (lives > 0)
         {
             lives--;
-            print(lives);
+            //print(lives);
+
+            livesHolder.transform.GetChild(lives).gameObject.SetActive(false);
+            // Kun lives m‰‰r‰ v‰henee, deaktivoidaan 
+            // syd‰met indeksien j‰rjestyksess‰ 2,1,0
+
         }
 
         if (lives <= 0)
